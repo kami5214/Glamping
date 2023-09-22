@@ -21,7 +21,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('usu_apellido');
             $table->string('usu_celular');
-            $table->integer('usu_cedula');
+            $table->integer('usu_cedula')->default('0');
             $table->string('estado');
         });
     }
