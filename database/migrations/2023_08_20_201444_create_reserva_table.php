@@ -12,18 +12,25 @@ return new class extends Migration
      */
     public function up(): void
     {   
-        Schema::create('reserva', function (Blueprint $table) {
+        Schema::create('reservas', function (Blueprint $table) {
             $table->id();
             $table->date('res_fecha_ini');
             $table->date('res_fecha_fin');
             //$table->unsignedBigInteger('usu_cedula')->unsigned();
             $table->date('res_fecha_registro');
-            $table->double('res_subtotal');
+            $table->string('res_estado');
             $table->double('res_descuento');
             $table->double('res_iva');
             $table->double('res_total');
             $table->timestamps();
+            $table->iteger('res_cantidad_per');
+            $table->unsignedBigInteger('usu_cedula');
+            $table->unsignedBigInteger('dom_codigo');
+            $table->unsignedBigInteger('cli_cedula');
 
+            $table->foreign('usu_cedula')->references('id')->on('users');
+            $table->foreign('dom_codigo')->references('id')->on('domos');
+            $table->foreign('cli_cedula')->references('id')->on('clientes');
             //$table->foreign('usu_cedula')->references('id')->on('users');
         });
     }
@@ -33,6 +40,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reserva');
+        Schema::dropIfExists('reservas');
     }
 };
