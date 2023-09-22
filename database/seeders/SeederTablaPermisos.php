@@ -64,7 +64,7 @@ class SeederTablaPermisos extends Seeder
 foreach($permisos as $permiso){
     Permission::create([ 'name'=>$permiso])->syncRoles([$role1]);
 }
-      User::create(['name' => 'Superadmin', 'email' => 'admin@gmail.com', 'password' => '12345678','usu_apellido' => 'crack','usu_celular' => '3026405997','estado' => 'activo','usu_cedula' => '10052348855']);
+      User::create(['name' => 'Superadmin', 'email' => 'admin@gmail.com', 'password' => '12345678','usu_apellido' => 'crack','usu_celular' => '3026405997','estado' => 'activo','usu_cedula' => '0']);
 
      $user = User::find(1);
         $user->assignRole('Administrador');
