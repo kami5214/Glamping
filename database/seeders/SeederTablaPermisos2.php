@@ -25,11 +25,7 @@ class SeederTablaPermisos2 extends Seeder
             'crear-domo',
             'editar-domo',
             'borrar-domo',
-            //tabla-clientes
-            'ver-cliente',
-            'crear-cliente',
-            'editar-cliente',
-            'borrar-cliente',      
+                  
                         //tabla-servicios
                         'ver-servicio',
                         'crear-servicio',
