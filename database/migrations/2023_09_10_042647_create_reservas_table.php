@@ -20,7 +20,6 @@ return new class extends Migration
             $table->date('res_fecha_registro');
             $table->string('res_estado')->default('activo');
             $table->double('res_descuento');
-            $table->double('res_iva');
             $table->double('res_total');
             $table->timestamps();
             $table->integer('res_cantidad_per');
