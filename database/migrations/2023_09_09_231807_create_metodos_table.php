@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('metodos', function (Blueprint $table) {
             $table->id('met_codigo');
             $table->string('met_nombre')->unique();
+            $table->string('estado');
+            $table->integer('ser_precio');
+            $table->integer('ser_cantidad');
             $table->timestamps();
         });
     }
