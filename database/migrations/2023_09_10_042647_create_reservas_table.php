@@ -29,7 +29,7 @@ return new class extends Migration
             $table->unsignedBigInteger('cli_cedula');
 
             $table->foreign('usu_cedula')->references('id')->on('users');
-            $table->foreign('dom_codigo')->references('id')->on('domos');
+            $table->foreign('dom_codigo')->references('dom_codigo')->on('domos');
             $table->foreign('cli_cedula')->references('id')->on('clientes');
             //$table->foreign('usu_cedula')->references('id')->on('users');
         });
