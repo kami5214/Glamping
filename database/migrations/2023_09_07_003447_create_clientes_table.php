@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('cli_ciudad');
             $table->string('cli_estado');
             $table->timestamps();
+            $table->integer('cli_cedula');
         });
     }
 
