@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class servicio extends Model
+class Servicio extends Model
 {
     use HasFactory;
     protected $fillable = ['ser_nombre', 'ser_estado', 'ser_precio','ser_cantidad'
