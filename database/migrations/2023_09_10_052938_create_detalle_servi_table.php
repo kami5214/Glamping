@@ -17,8 +17,6 @@ return new class extends Migration
             $table->foreign('ser_codigo')->references('ser_codigo')->on('servicios');
             $table->unsignedBigInteger('res_codigo')->unsigned();
             $table->foreign('res_codigo')->references('id')->on('reservas');
-            $table->integer('detse_precio');
-            $table->integer('detse_cantidad');
             $table->timestamps();
         });
     }
