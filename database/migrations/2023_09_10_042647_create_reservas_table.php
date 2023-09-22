@@ -23,7 +23,7 @@ return new class extends Migration
             $table->double('res_iva');
             $table->double('res_total');
             $table->timestamps();
-            $table->iteger('res_cantidad_per');
+            $table->integer('res_cantidad_per');
             $table->unsignedBigInteger('usu_cedula');
             $table->unsignedBigInteger('dom_codigo');
             $table->unsignedBigInteger('cli_cedula');
