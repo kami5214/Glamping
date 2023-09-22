@@ -13,7 +13,9 @@ class SeederTablaPermisos extends Seeder
      * Run the database seeds.
      */
     public function run(): void
-    {
+    {   $role1 = Role::create(['name' => 'Administrador']);
+        $role2 = Role::create(['name' => 'Asistente']); 
+        
         $permisos=[ 
          //tabla-roles
          'ver-rol',
@@ -58,7 +60,12 @@ class SeederTablaPermisos extends Seeder
                                                
         ];
 foreach($permisos as $permiso){
-    Permission::create([ 'name'=>$permiso]);
+    Permission::create([ 'name'=>$permiso])->syncRoles([$role1]);
 }
+      User::create(['name' => 'Superadmin', 'email' => 'admin@gmail.com', 'password' => '12345678','usu_apellido' => 'crack','usu_celular' => '3026405997','estado' => 'activo','usu_cedula' => '10052348855']);
+
+     $user = User::find(1);
+        $user->assignRole('Administrador');
+        
     }
 }
