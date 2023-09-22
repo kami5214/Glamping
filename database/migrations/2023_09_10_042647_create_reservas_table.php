@@ -18,8 +18,8 @@ return new class extends Migration
             $table->date('res_fecha_fin');
             //$table->unsignedBigInteger('usu_cedula')->unsigned();
             $table->date('res_fecha_registro');
-            $table->string('res_estado');
-            $table->double('res_descuento')->default('activo');
+            $table->string('res_estado')->default('activo');
+            $table->double('res_descuento');
             $table->double('res_iva');
             $table->double('res_total');
             $table->timestamps();
