@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 //spatie
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class SeederTablaPermisos extends Seeder
 {
